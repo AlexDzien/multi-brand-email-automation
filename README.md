@@ -2,7 +2,7 @@
 
 Case study of multi-brand B2B outreach with evidence-based drafts, exclusions, and delivery review.
 
-**Zakres publiczny:** Studium przypadku automatyzacji operacyjnej.
+**Zakres publiczny:** studium przypadku, przykładowy moduł odczytu kontaktów i testy.
 
 ## Problem
 
@@ -20,6 +20,13 @@ Różne marki prowadziły własne kampanie i obsługiwały inne grupy odbiorców
 Python, przetwarzanie HTML/JSON, kolejki, rejestry źródeł, SMTP/IMAP w aplikacjach obsługujących kampanie.
 
 ## Co można sprawdzić
+
+`bounded_contacts.py` wyciąga wyłącznie adresy obecne w podanym tekście lub w odsyłaczach `mailto:`. Deduplikuje wynik, pomija skrypty i nieprzetwarzane zasoby, a liczba znaków i odsyłaczy podlega limitom. Odczyt nie potwierdza, że adres jest aktywny ani że dozwolona jest wysyłka.
+
+```bash
+python -m pip install -r requirements.txt
+python -m unittest discover -s tests
+```
 
 Zachowany oddzielny eksport testowy n8n pokazuje integrację Google Sheets → Lemlist. Arkusz dostarcza rekordy, węzeł Set ustawia parametry kampanii, a żądanie HTTP mapuje pola do operacji dodania leada. To dowód przygotowania i integracji rekordów do kampanii. Status faktycznej wysyłki i jej wyniki wymagają danych wykonania z platformy.
 
