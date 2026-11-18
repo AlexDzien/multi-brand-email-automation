@@ -21,4 +21,8 @@ Python, przetwarzanie HTML/JSON, kolejki, rejestry źródeł, SMTP/IMAP w aplika
 
 ## Co można sprawdzić
 
+Zachowany oddzielny eksport testowy n8n pokazuje integrację Google Sheets → Lemlist. Arkusz dostarcza rekordy, węzeł Set ustawia parametry kampanii, a żądanie HTTP mapuje pola do operacji dodania leada. To dowód przygotowania i integracji rekordów do kampanii. Status faktycznej wysyłki i jej wyniki wymagają danych wykonania z platformy.
+
+[Mapa testowego przepływu n8n](workflows/sheets-to-lemlist.md).
+
 Publikacja opisuje przebieg operacyjny i relację z [SalesPilot](https://github.com/AlexDzien/salespilot-outreach) oraz [Procurement Studio & CRM](https://github.com/AlexDzien/procurement-studio-crm). Skuteczność kampanii pozostaje do udokumentowania na podstawie zagregowanych danych.
